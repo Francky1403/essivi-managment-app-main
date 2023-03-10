@@ -50,8 +50,9 @@ class _VenteCliPageState extends State<VenteCliPage> {
             ],
             dropdownDecoratorProps: DropDownDecoratorProps(
               dropdownSearchDecoration: InputDecoration(
-                hintText: "Nom & Prenom",
-              ),
+                  hintText: "Nom & Prenom",
+                  border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(10))),
             ),
             onChanged: print,
           ),
@@ -75,8 +76,9 @@ class _VenteCliPageState extends State<VenteCliPage> {
             ],
             dropdownDecoratorProps: DropDownDecoratorProps(
               dropdownSearchDecoration: InputDecoration(
-                hintText: "Produit & Prix",
-              ),
+                  hintText: "Produit & Prix",
+                  border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(10))),
             ),
             onChanged: print,
           ),

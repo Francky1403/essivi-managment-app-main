@@ -76,7 +76,7 @@ class Aceuil extends StatelessWidget {
                       style: TextStyle(fontSize: 20),
                     ),
                     onPressed: () {
-                      Navigator.push(
+                      Navigator.pushReplacement(
                         context,
                         MaterialPageRoute(
                           builder: ((context) => LoginPage()),

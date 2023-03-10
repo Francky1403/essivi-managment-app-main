@@ -35,9 +35,10 @@ class _VenteSipPageState extends State<VenteSipPage> {
               "King"
             ],
             dropdownDecoratorProps: DropDownDecoratorProps(
-              dropdownSearchDecoration: InputDecoration(
-                hintText: "Produit & Prix",
-              ),
+              dropdownSearchDecoration: InputDecoration (
+                  hintText: "Produit & Prix",
+                  border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(10))),
             ),
             onChanged: print,
           ),

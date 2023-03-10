@@ -130,7 +130,7 @@ class _LoginPageState extends State<LoginPage> {
                           fontSize: 18),
                     ),
                     onPressed: () {
-                      Navigator.push(
+                      Navigator.pushReplacement(
                         context,
                         MaterialPageRoute(
                           builder: ((context) => NaviPage()),
