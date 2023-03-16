@@ -21,11 +21,11 @@ class _VentePageState extends State<VentePage> {
           backgroundColor: Color.fromARGB(255, 255, 255, 255),
           appBar: AppBar(
             automaticallyImplyLeading: false,
-            backgroundColor: Color.fromARGB(255, 10, 40, 63),
+            backgroundColor: Color.fromARGB(255, 20, 62, 93),
             elevation: 2,
             title: Text(
               'Vente',
-              style: GoogleFonts.arbutusSlab(
+              style: GoogleFonts.asset(
                   color: Color.fromARGB(255, 252, 251, 251), fontSize: 24),
             ),
             centerTitle: true,
@@ -37,7 +37,7 @@ class _VentePageState extends State<VentePage> {
                 ),
                 child: Text(
                   'Vente Client',
-                  style: GoogleFonts.arbutus(
+                  style: GoogleFonts.asset(
                     color: Color.fromARGB(255, 255, 255, 255),
                     fontSize: 12,
                   ),

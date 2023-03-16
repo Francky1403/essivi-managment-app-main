@@ -20,11 +20,11 @@ class _ClientPageState extends State<ClientPage> {
           backgroundColor: Color.fromARGB(255, 255, 255, 255),
           appBar: AppBar(
             automaticallyImplyLeading: false,
-            backgroundColor: Color.fromARGB(255, 10, 40, 63),
+            backgroundColor: Color.fromARGB(255, 20, 62, 93),
             elevation: 2,
             title: Text(
               'Client',
-              style: GoogleFonts.arbutusSlab(
+              style: GoogleFonts.asset(
                   color: Color.fromARGB(255, 252, 251, 251), fontSize: 24),
             ),
             centerTitle: true,
@@ -37,7 +37,7 @@ class _ClientPageState extends State<ClientPage> {
                 ),
                 child: Text(
                   'Formulaire Client',
-                  style: GoogleFonts.arbutus(
+                  style: GoogleFonts.asset(
                     color: Color.fromARGB(255, 255, 255, 255),
                     fontSize: 15,
                   ),
@@ -51,7 +51,7 @@ class _ClientPageState extends State<ClientPage> {
                 ),
                 child: Text(
                   'Liste Client',
-                  style: GoogleFonts.arbutus(
+                  style: GoogleFonts.asset(
                     color: Color.fromARGB(255, 252, 252, 252),
                     fontSize: 15,
                   ),

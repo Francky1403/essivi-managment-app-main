@@ -46,7 +46,7 @@ class _listClientState extends State<listClient> {
           child: Card(
             elevation: 20.0,
             shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(20.0),
+              borderRadius: BorderRadius.circular(10.0),
             ),
             child: Container(
               width: MediaQuery.of(context).size.width,
@@ -59,19 +59,34 @@ class _listClientState extends State<listClient> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
                       //Text(id[index], style: TextStyle(color: Colors.black, fontSize: 18, fontWeight: FontWeight.bold),),
+
+                      Text(
+                        name[index],
+                        style: TextStyle(
+                            color: Colors.black,
+                            fontSize: 24,
+                            fontWeight: FontWeight.bold),
+                      ),
+
                       Row(
-                          crossAxisAlignment: CrossAxisAlignment.center,
+                          mainAxisAlignment: MainAxisAlignment.center,
                           children: <Widget>[
-                            Padding(padding: EdgeInsets.only(left: 7)),
+                            Padding(padding: EdgeInsets.all(5)),
+                            Icon(
+                              Icons.phone,
+                              color: Colors.grey,
+                              size: 20,
+                            ),
+                            const SizedBox(width: 5),
                             Text(
-                              name[index],
+                              telephone[index],
                               style: TextStyle(
-                                  color: Colors.black,
-                                  fontSize: 24,
+                                  color: Colors.grey,
+                                  fontSize: 18,
                                   fontWeight: FontWeight.bold),
                             ),
                             IconButton(
-                              padding: EdgeInsets.only(left: 230),
+                              padding: EdgeInsets.only(left: 200),
                               onPressed: () {
                                 Get.to(detailsCli(),
                                     transition: Transition.rightToLeft,
@@ -84,22 +99,6 @@ class _listClientState extends State<listClient> {
                                 color: Color.fromARGB(255, 10, 40, 63),
                                 size: 20,
                               ),
-                            ),
-                          ]),
-                      Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: <Widget>[
-                            Icon(
-                              Icons.phone,
-                              color: Colors.grey,
-                              size: 20,
-                            ),
-                            Text(
-                              telephone[index],
-                              style: TextStyle(
-                                  color: Colors.grey,
-                                  fontSize: 18,
-                                  fontWeight: FontWeight.bold),
                             ),
                           ]),
                     ],

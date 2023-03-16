@@ -16,7 +16,6 @@ class _NaviPageState extends State<NaviPage> {
     VentePage(),
     ClientPage(),
     commande(),
-    
   ];
   @override
   Widget build(BuildContext context) {
@@ -28,7 +27,7 @@ class _NaviPageState extends State<NaviPage> {
         child: CurvedNavigationBar(
             height: 60,
             backgroundColor: Color.fromARGB(255, 249, 249, 249),
-            color: Color.fromARGB(255, 10, 40, 63),
+            color: Color.fromARGB(255, 20, 62, 93),
             animationDuration: Duration(milliseconds: 550),
             onTap: (index) => setState(() => this.index = index),
             items: const [
@@ -44,7 +43,6 @@ class _NaviPageState extends State<NaviPage> {
                 FontAwesomeIcons.boxesStacked,
                 color: Colors.white,
               ),
-              
             ]),
       ),
     );

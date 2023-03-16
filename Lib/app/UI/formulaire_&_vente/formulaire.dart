@@ -182,7 +182,7 @@ class _FormPage extends State<FormPage> {
                     children: [
                       Center(
                         child: Text(
-                          "Localisation: $Geolocalisation",
+                          "Loc: $Geolocalisation",
                           style: TextStyle(
                             fontSize: 24,
                           ),
@@ -213,7 +213,7 @@ class _FormPage extends State<FormPage> {
                           style: ElevatedButton.styleFrom(
                             shape: StadiumBorder(),
                             padding: EdgeInsets.all(13),
-                            backgroundColor: Color.fromARGB(255, 10, 40, 63),
+                            backgroundColor: Color.fromARGB(255, 11, 86, 143),
                           ),
                           child: Text(
                             'Enregistrer',

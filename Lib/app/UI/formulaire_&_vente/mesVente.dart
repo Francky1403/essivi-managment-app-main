@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:water/app/UI/formulaire_&_vente/details_Vente.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class MVentePage extends StatefulWidget {
   @override
@@ -22,6 +23,18 @@ class _MVentePageState extends State<MVentePage> {
     "92998082",
     "92998082"
   ];
+  List name = [
+    "King",
+    "Samuel",
+    "Loui",
+    "Tiger",
+    "John",
+    "Jolie",
+    "King",
+    "King",
+    "King",
+    "King"
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -35,7 +48,7 @@ class _MVentePageState extends State<MVentePage> {
           child: Card(
             elevation: 20.0,
             shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(20.0),
+              borderRadius: BorderRadius.circular(10.0),
             ),
             child: Container(
               width: MediaQuery.of(context).size.width,
@@ -49,14 +62,24 @@ class _MVentePageState extends State<MVentePage> {
                       children: <Widget>[
                         //Text(id[index], style: TextStyle(color: Colors.black, fontSize: 18, fontWeight: FontWeight.bold),),
 
+                        Text(
+                          name[index],
+                          style: TextStyle(
+                              color: Colors.black,
+                              fontSize: 24,
+                              fontWeight: FontWeight.bold),
+                        ),
+
                         Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: <Widget>[
+                              Padding(padding: EdgeInsets.all(5)),
                               Icon(
                                 Icons.phone,
                                 color: Colors.grey,
                                 size: 20,
                               ),
+                              const SizedBox(width: 5),
                               Text(
                                 telephone[index],
                                 style: TextStyle(
@@ -65,7 +88,7 @@ class _MVentePageState extends State<MVentePage> {
                                     fontWeight: FontWeight.bold),
                               ),
                               IconButton(
-                                padding: EdgeInsets.only(left: 210),
+                                padding: EdgeInsets.only(left: 200),
                                 onPressed: () {
                                   Get.to(detailsVen(),
                                       transition: Transition.rightToLeft,
@@ -80,19 +103,23 @@ class _MVentePageState extends State<MVentePage> {
                                 ),
                               ),
                             ]),
-
-                        Text(
-                          "Vente",
-                          style: TextStyle(fontSize: 18, color: Colors.grey),
-                        ),
-
-                        Text(
-                          id[index],
-                          style: TextStyle(
-                              color: Color.fromARGB(255, 79, 78, 78),
-                              fontSize: 18,
-                              fontWeight: FontWeight.bold),
-                        ),
+                        const SizedBox(height: 5),
+                        Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: <Widget>[
+                              Padding(padding: EdgeInsets.all(5)),
+                              FaIcon(
+                                FontAwesomeIcons.bagShopping,
+                                color: Colors.grey,
+                                size: 20,
+                              ),
+                              const SizedBox(width: 5),
+                              Text(
+                                "Vente",
+                                style:
+                                    TextStyle(fontSize: 18, color: Colors.grey),
+                              ),
+                            ]),
                       ]),
                 ],
               ),

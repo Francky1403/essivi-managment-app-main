@@ -15,7 +15,7 @@ class _detailsVenState extends State<detailsVen> {
     return Scaffold(
       appBar: AppBar(
         elevation: 2,
-        backgroundColor: Color.fromARGB(255, 10, 40, 63),
+        backgroundColor: Color.fromARGB(255, 20, 62, 93),
         title: Text(
           "Détails Vente",
           style: GoogleFonts.arbutusSlab(

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:water/app/UI/formulaire_&_vente/detailsCom.dart';
@@ -43,7 +44,7 @@ class _commandeState extends State<commande> {
       appBar: AppBar(
         automaticallyImplyLeading: false,
         elevation: 2,
-        backgroundColor: Color.fromARGB(255, 10, 40, 63),
+        backgroundColor: Color.fromARGB(255, 20, 62, 93),
         title: Text(
           "Commande",
           style: GoogleFonts.arbutusSlab(
@@ -60,7 +61,7 @@ class _commandeState extends State<commande> {
           child: Card(
             elevation: 20.0,
             shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(35.0),
+              borderRadius: BorderRadius.circular(10.0),
             ),
             child: Container(
               width: MediaQuery.of(context).size.width,
@@ -73,19 +74,34 @@ class _commandeState extends State<commande> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
                       //Text(id[index], style: TextStyle(color: Colors.black, fontSize: 18, fontWeight: FontWeight.bold),),
+
+                      Text(
+                        name[index],
+                        style: TextStyle(
+                            color: Colors.black,
+                            fontSize: 24,
+                            fontWeight: FontWeight.bold),
+                      ),
+
                       Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: <Widget>[
-                            Padding(padding: EdgeInsets.only(left: 7)),
+                            Padding(padding: EdgeInsets.all(5)),
+                            Icon(
+                              Icons.phone,
+                              color: Colors.grey,
+                              size: 20,
+                            ),
+                            const SizedBox(width: 5),
                             Text(
-                              name[index],
+                              telephone[index],
                               style: TextStyle(
-                                  color: Colors.black,
-                                  fontSize: 24,
+                                  color: Colors.grey,
+                                  fontSize: 18,
                                   fontWeight: FontWeight.bold),
                             ),
                             IconButton(
-                              padding: EdgeInsets.only(left: 230),
+                              padding: EdgeInsets.only(left: 200),
                               onPressed: () {
                                 Get.to(detailsCom(),
                                     transition: Transition.rightToLeft,
@@ -100,23 +116,7 @@ class _commandeState extends State<commande> {
                               ),
                             ),
                           ]),
-                      Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: <Widget>[
-                            Icon(
-                              Icons.phone,
-                              color: Colors.grey,
-                              size: 20,
-                            ),
-                            Text(
-                              telephone[index],
-                              style: TextStyle(
-                                  color: Colors.grey,
-                                  fontSize: 18,
-                                  fontWeight: FontWeight.bold),
-                            ),
-                          ]),
-                      const SizedBox(height: 9),
+                      const SizedBox(height: 5),
                       /* Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: <Widget>[
@@ -136,11 +136,13 @@ class _commandeState extends State<commande> {
                       Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: <Widget>[
+                            Padding(padding: EdgeInsets.all(5)),
                             Icon(
                               Icons.calendar_month,
                               color: Colors.grey,
                               size: 20,
                             ),
+                            const SizedBox(width: 5),
                             Text(
                               today.toString(),
                               style: TextStyle(
@@ -150,22 +152,21 @@ class _commandeState extends State<commande> {
                             ),
                           ]),
                       const SizedBox(height: 9),
-
-                      Text(
-                        "Commande",
-                        style: TextStyle(fontSize: 18, color: Colors.grey),
-                      ),
                       Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: <Widget>[
-                            Padding(padding: EdgeInsets.only(left: 7)),
+                            Padding(padding: EdgeInsets.all(5)),
+                            FaIcon(
+                              FontAwesomeIcons.boxArchive,
+                              color: Colors.grey,
+                              size: 20,
+                            ),
+                            const SizedBox(width: 5),
                             Text(
-                              id[index],
-                              style: TextStyle(
-                                  color: Color.fromARGB(255, 79, 78, 78),
-                                  fontSize: 18,
-                                  fontWeight: FontWeight.bold),
-                            ),              
+                              "Commande",
+                              style:
+                                  TextStyle(fontSize: 18, color: Colors.grey),
+                            ),
                           ]),
                     ],
                   ),
