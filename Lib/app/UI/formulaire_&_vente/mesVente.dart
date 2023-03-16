@@ -33,7 +33,7 @@ class _MVentePageState extends State<MVentePage> {
           width: MediaQuery.of(context).size.width,
           padding: EdgeInsets.symmetric(horizontal: 10.0, vertical: 7.0),
           child: Card(
-            elevation: 3.0,
+            elevation: 20.0,
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(20.0),
             ),

@@ -14,7 +14,6 @@ class _detailsVenState extends State<detailsVen> {
 
     return Scaffold(
       appBar: AppBar(
-        
         elevation: 2,
         backgroundColor: Color.fromARGB(255, 10, 40, 63),
         title: Text(
@@ -27,11 +26,19 @@ class _detailsVenState extends State<detailsVen> {
       body: Center(
         child: Column(children: [
           Text(
-            "id : ${data[0]}",
+            "Id : ${data[0]}",
             style: TextStyle(fontSize: 25, color: Colors.black),
           ),
           Text(
-            "telephone : ${data[1]}",
+            "Telephone : ${data[1]}",
+            style: TextStyle(fontSize: 25, color: Colors.black),
+          ),
+          Text(
+            "Produits : ${data[1]}",
+            style: TextStyle(fontSize: 25, color: Colors.black),
+          ),
+          Text(
+            "Prix Total : ${data[1]}",
             style: TextStyle(fontSize: 25, color: Colors.black),
           ),
         ]),

@@ -16,9 +16,7 @@ class _NaviPageState extends State<NaviPage> {
     VentePage(),
     ClientPage(),
     commande(),
-    Center(
-      child: Text('paramètre'),
-    ),
+    
   ];
   @override
   Widget build(BuildContext context) {
@@ -46,10 +44,7 @@ class _NaviPageState extends State<NaviPage> {
                 FontAwesomeIcons.boxesStacked,
                 color: Colors.white,
               ),
-              FaIcon(
-                FontAwesomeIcons.gear,
-                color: Colors.white,
-              ),
+              
             ]),
       ),
     );

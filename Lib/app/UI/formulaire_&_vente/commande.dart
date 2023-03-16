@@ -3,7 +3,6 @@ import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:water/app/UI/formulaire_&_vente/detailsCom.dart';
 
-
 class commande extends StatefulWidget {
   @override
   State<commande> createState() => _commandeState();
@@ -59,7 +58,7 @@ class _commandeState extends State<commande> {
           width: MediaQuery.of(context).size.width,
           padding: EdgeInsets.symmetric(horizontal: 10.0, vertical: 7.0),
           child: Card(
-            elevation: 3.0,
+            elevation: 20.0,
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(35.0),
             ),
@@ -166,58 +165,7 @@ class _commandeState extends State<commande> {
                                   color: Color.fromARGB(255, 79, 78, 78),
                                   fontSize: 18,
                                   fontWeight: FontWeight.bold),
-                            ),
-                            Container(
-                              child: Padding(
-                                padding: const EdgeInsets.only(left: 95.0),
-                                child: Container(
-                                  width: 100,
-                                  height: 40,
-                                  child: ElevatedButton(
-                                    style: ElevatedButton.styleFrom(
-                                      shape: StadiumBorder(),
-                                      padding: EdgeInsets.all(13),
-                                      backgroundColor:
-                                          Color.fromARGB(255, 200, 28, 28),
-                                    ),
-                                    child: Text(
-                                      'Refuser',
-                                      style: TextStyle(
-                                          color: Colors.white,
-                                          fontWeight: FontWeight.bold,
-                                          fontSize: 15),
-                                    ),
-                                    onPressed: () {},
-                                  ),
-                                ),
-                              ),
-                            ),
-                            Container(
-                              child: Padding(
-                                padding: const EdgeInsets.symmetric(
-                                    horizontal: 10.0),
-                                child: Container(
-                                  width: 100,
-                                  height: 40,
-                                  child: ElevatedButton(
-                                    style: ElevatedButton.styleFrom(
-                                      shape: StadiumBorder(),
-                                      padding: EdgeInsets.all(13),
-                                      backgroundColor:
-                                          Color.fromARGB(255, 4, 170, 57),
-                                    ),
-                                    child: Text(
-                                      'Accepter',
-                                      style: TextStyle(
-                                          color: Colors.white,
-                                          fontWeight: FontWeight.bold,
-                                          fontSize: 15),
-                                    ),
-                                    onPressed: () {},
-                                  ),
-                                ),
-                              ),
-                            ),
+                            ),              
                           ]),
                     ],
                   ),

@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:get/get.dart';
@@ -27,22 +26,28 @@ class _detailsCliState extends State<detailsCli> {
         centerTitle: true,
       ),
       body: Center(
-
-      child: Column( 
-        children: [
-      Text(
-            "nom : ${data[0]}",
+        child: Column(children: [
+          Text(
+            "Nom : ${data[0]}",
             style: TextStyle(
               fontSize: 25,
               color: Colors.black,
             ),
           ),
           Text(
-            "telephone : ${data[1]}",
+            "Nom Société : ${data[1]}",
             style: TextStyle(fontSize: 25, color: Colors.black),
           ),
-        ]
+          Text(
+            "Telephone : ${data[1]}",
+            style: TextStyle(fontSize: 25, color: Colors.black),
+          ),
+          Text(
+            "Localisation : ${data[1]}",
+            style: TextStyle(fontSize: 25, color: Colors.black),
+          ),
+        ]),
       ),
-     ),);
+    );
   }
 }
