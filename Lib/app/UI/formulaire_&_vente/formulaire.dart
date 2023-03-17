@@ -30,7 +30,7 @@ class _FormPage extends State<FormPage> {
       print("$lat , $long");
 
       setState(() {
-        Geolocalisation = "Latitude : $lat , Longitude : $long";
+        Geolocalisation = " $lat ,  $long";
       });
     }
   }
@@ -44,7 +44,7 @@ class _FormPage extends State<FormPage> {
           children: [
             Container(
               alignment: Alignment.center,
-              margin: const EdgeInsets.fromLTRB(25, 10, 25, 10),
+              margin: const EdgeInsets.fromLTRB(20, 10, 25, 10),
               padding: const EdgeInsets.fromLTRB(10, 0, 10, 0),
               child: Column(
                 children: [
@@ -182,7 +182,7 @@ class _FormPage extends State<FormPage> {
                     children: [
                       Center(
                         child: Text(
-                          "Loc: $Geolocalisation",
+                          "Lc: $Geolocalisation",
                           style: TextStyle(
                             fontSize: 24,
                           ),

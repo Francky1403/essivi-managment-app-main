@@ -24,7 +24,7 @@ class _ClientPageState extends State<ClientPage> {
             elevation: 2,
             title: Text(
               'Client',
-              style: GoogleFonts.asset(
+              style: GoogleFonts.arbutus(
                   color: Color.fromARGB(255, 252, 251, 251), fontSize: 24),
             ),
             centerTitle: true,
@@ -37,7 +37,7 @@ class _ClientPageState extends State<ClientPage> {
                 ),
                 child: Text(
                   'Formulaire Client',
-                  style: GoogleFonts.asset(
+                  style: GoogleFonts.arbutus(
                     color: Color.fromARGB(255, 255, 255, 255),
                     fontSize: 15,
                   ),
@@ -51,7 +51,7 @@ class _ClientPageState extends State<ClientPage> {
                 ),
                 child: Text(
                   'Liste Client',
-                  style: GoogleFonts.asset(
+                  style: GoogleFonts.arbutus(
                     color: Color.fromARGB(255, 252, 252, 252),
                     fontSize: 15,
                   ),

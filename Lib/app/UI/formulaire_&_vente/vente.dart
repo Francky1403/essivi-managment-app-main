@@ -37,7 +37,7 @@ class _VentePageState extends State<VentePage> {
                 ),
                 child: Text(
                   'Vente Client',
-                  style: GoogleFonts.asset(
+                  style: GoogleFonts.arbutus(
                     color: Color.fromARGB(255, 255, 255, 255),
                     fontSize: 12,
                   ),

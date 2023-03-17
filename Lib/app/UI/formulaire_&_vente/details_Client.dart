@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:get/get.dart';
+import 'package:water/app/UI/formulaire_&_vente/maps.dart';
 
 class detailsCli extends StatefulWidget {
   const detailsCli({super.key});
@@ -16,7 +17,7 @@ class _detailsCliState extends State<detailsCli> {
 
     return Scaffold(
       appBar: AppBar(
-        elevation: 2,
+        elevation: 5,
         backgroundColor: Color.fromARGB(255, 20, 62, 93),
         title: Text(
           "Détails Client",
@@ -25,26 +26,43 @@ class _detailsCliState extends State<detailsCli> {
         ),
         centerTitle: true,
       ),
-      body: Center(
+      body: SingleChildScrollView(
         child: Column(children: [
-          Text(
-            "Nom : ${data[0]}",
-            style: TextStyle(
-              fontSize: 25,
-              color: Colors.black,
+          Container(),
+          const SizedBox(
+            height: 20,
+          ),
+          Container(
+            child: Column(children: [
+              Text(
+                "Nom : ${data[0]}",
+                style: TextStyle(
+                  fontSize: 25,
+                  color: Colors.black,
+                ),
+              ),
+              Text(
+                "Nom Société : ${data[1]}",
+                style: TextStyle(fontSize: 25, color: Colors.black),
+              ),
+              Text(
+                "Telephone : ${data[1]}",
+                style: TextStyle(fontSize: 25, color: Colors.black),
+              ),
+              Text(
+                "Localisation : ${data[1]}",
+                style: TextStyle(fontSize: 25, color: Colors.black),
+              ),
+            ]),
+          ),
+          const SizedBox(
+            height: 20,
+          ),
+          Container(
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(56),
             ),
-          ),
-          Text(
-            "Nom Société : ${data[1]}",
-            style: TextStyle(fontSize: 25, color: Colors.black),
-          ),
-          Text(
-            "Telephone : ${data[1]}",
-            style: TextStyle(fontSize: 25, color: Colors.black),
-          ),
-          Text(
-            "Localisation : ${data[1]}",
-            style: TextStyle(fontSize: 25, color: Colors.black),
+            child: maps(),
           ),
         ]),
       ),
