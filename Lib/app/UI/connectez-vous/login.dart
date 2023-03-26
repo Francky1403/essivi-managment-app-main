@@ -23,7 +23,7 @@ class _LoginPageState extends State<LoginPage> {
                 delay: 1500,
                 child: Container(
                   height: 150,
-                  margin: EdgeInsets.only(
+                  margin: const EdgeInsets.only(
                     top: 35,
                   ),
                   child: Image.asset('images/OIP(2).jpeg'),
@@ -72,13 +72,14 @@ class _LoginPageState extends State<LoginPage> {
                           color: const Color.fromARGB(255, 241, 241, 241)),
                       borderRadius: BorderRadius.circular(30),
                     ),
-                    child: const Padding(
+                    child: Padding(
                       padding: EdgeInsets.only(left: 20.0),
                       child: TextField(
-                        decoration: InputDecoration(
+                        decoration: const InputDecoration(
                           border: InputBorder.none,
                           hintText: "Numéro de Téléphone",
                         ),
+                        keyboardType: TextInputType.number,
                       ),
                     ),
                   ),
