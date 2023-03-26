@@ -184,7 +184,7 @@ class _FormPage extends State<FormPage> {
                         child: Text(
                           "Lc: $Geolocalisation",
                           style: TextStyle(
-                            fontSize: 24,
+                            fontSize: 22,
                           ),
                         ),
                       ),
