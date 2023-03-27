@@ -24,7 +24,7 @@ class _ClientPageState extends State<ClientPage> {
             elevation: 2,
             title: Text(
               'Client',
-              style: GoogleFonts.arbutus(
+              style: GoogleFonts.asset(
                   color: Color.fromARGB(255, 252, 251, 251), fontSize: 24),
             ),
             centerTitle: true,

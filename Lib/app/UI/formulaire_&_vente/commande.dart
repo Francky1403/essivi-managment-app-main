@@ -47,7 +47,7 @@ class _commandeState extends State<commande> {
         backgroundColor: Color.fromARGB(255, 20, 62, 93),
         title: Text(
           "Commande",
-          style: GoogleFonts.arbutusSlab(
+          style: GoogleFonts.asset(
               color: Color.fromARGB(255, 252, 251, 251), fontSize: 24),
         ),
         centerTitle: true,
