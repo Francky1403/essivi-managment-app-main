@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:get_storage/get_storage.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:water/app/UI/shared/animations/animation.dart';
 import 'package:water/app/UI/connectez-vous/login.dart';
+import 'package:water/app/UI/shared/animations/navigation.dart';
 
 class Aceuil extends StatelessWidget {
   @override
@@ -29,7 +31,7 @@ class Aceuil extends StatelessWidget {
                   child: Text(
                     "ESSIVI-Sarl",
                     textAlign: TextAlign.center,
-                    style: GoogleFonts.roboto(
+                    style: GoogleFonts.poppins(
                       color: Colors.blue,
                       fontSize: 24,
                     ),
@@ -54,7 +56,7 @@ class Aceuil extends StatelessWidget {
                   child: Text(
                     "ESSIVI l'eau qui donne le sourire et la joie au coeur",
                     textAlign: TextAlign.center,
-                    style: GoogleFonts.ubuntu(
+                    style: GoogleFonts.poppins(
                       color: Colors.blue,
                       fontSize: 17,
                     ),
@@ -68,20 +70,29 @@ class Aceuil extends StatelessWidget {
                   height: 55,
                   child: ElevatedButton(
                     style: ElevatedButton.styleFrom(
-                      shape: StadiumBorder(),
-                      padding: EdgeInsets.all(13),
+                      shape: const StadiumBorder(),
+                      padding: const EdgeInsets.all(13),
                     ),
-                    child: Text(
-                      'SE CONNECTER',
+                    child: const Text(
+                      'COMMENCER',
                       style: TextStyle(fontSize: 20),
                     ),
                     onPressed: () {
-                      Navigator.pushReplacement(
-                        context,
-                        MaterialPageRoute(
-                          builder: ((context) => LoginPage()),
-                        ),
-                      );
+                      if (GetStorage().read('authenticated') == null) {
+                        Navigator.pushReplacement(
+                          context,
+                          MaterialPageRoute(
+                            builder: ((context) => LoginPage()),
+                          ),
+                        );
+                      } else {
+                        Navigator.pushReplacement(
+                          context,
+                          MaterialPageRoute(
+                            builder: ((context) => NaviPage()),
+                          ),
+                        );
+                      }
                     },
                   ),
                 ),

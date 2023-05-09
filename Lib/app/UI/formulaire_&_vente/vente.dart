@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:water/app/UI/formulaire_&_vente/mesVente.dart';
 import 'package:water/app/UI/formulaire_&_vente/venteCli.dart';
 import 'package:water/app/UI/formulaire_&_vente/venteSip.dart';
+import 'package:water/app/UI/connectez-vous/account.dart';
 
 class VentePage extends StatefulWidget {
   const VentePage({super.key});
@@ -20,13 +22,20 @@ class _VentePageState extends State<VentePage> {
           extendBody: true,
           backgroundColor: Color.fromARGB(255, 255, 255, 255),
           appBar: AppBar(
+            actions: [
+              IconButton(
+                  onPressed: () {
+                    Get.to(Account());
+                  },
+                  icon: const Icon(Icons.account_circle_rounded))
+            ],
             automaticallyImplyLeading: false,
-            backgroundColor: Color.fromARGB(255, 10, 40, 63),
+            backgroundColor: Color.fromARGB(255, 20, 62, 93),
             elevation: 2,
             title: Text(
               'Vente',
-              style: GoogleFonts.arbutusSlab(
-                  color: Color.fromARGB(255, 252, 251, 251), fontSize: 24),
+              style: GoogleFonts.poppins(
+                  color: Color.fromARGB(255, 252, 251, 251), fontSize: 22),
             ),
             centerTitle: true,
             bottom: TabBar(tabs: [
@@ -37,7 +46,7 @@ class _VentePageState extends State<VentePage> {
                 ),
                 child: Text(
                   'Vente Client',
-                  style: GoogleFonts.arbutus(
+                  style: GoogleFonts.poppins(
                     color: Color.fromARGB(255, 255, 255, 255),
                     fontSize: 12,
                   ),
@@ -50,7 +59,7 @@ class _VentePageState extends State<VentePage> {
                 ),
                 child: Text(
                   'Vente Simple',
-                  style: GoogleFonts.arbutus(
+                  style: GoogleFonts.poppins(
                     color: Color.fromARGB(255, 252, 252, 252),
                     fontSize: 12,
                   ),
@@ -63,7 +72,7 @@ class _VentePageState extends State<VentePage> {
                 ),
                 child: Text(
                   'Mes Ventes',
-                  style: GoogleFonts.arbutus(
+                  style: GoogleFonts.poppins(
                     color: Color.fromARGB(255, 255, 255, 255),
                     fontSize: 12,
                   ),

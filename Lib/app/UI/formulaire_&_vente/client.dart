@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:water/app/UI/connectez-vous/account.dart';
 import 'package:water/app/UI/formulaire_&_vente/formulaire.dart';
 import 'package:water/app/UI/formulaire_&_vente/liste_Clients.dart';
 
@@ -19,13 +21,20 @@ class _ClientPageState extends State<ClientPage> {
           extendBody: true,
           backgroundColor: Color.fromARGB(255, 255, 255, 255),
           appBar: AppBar(
+            actions: [
+              IconButton(
+                  onPressed: () {
+                    Get.to(Account());
+                  },
+                  icon: Icon(Icons.account_circle_rounded))
+            ],
             automaticallyImplyLeading: false,
-            backgroundColor: Color.fromARGB(255, 10, 40, 63),
+            backgroundColor: Color.fromARGB(255, 20, 62, 93),
             elevation: 2,
             title: Text(
               'Client',
-              style: GoogleFonts.arbutusSlab(
-                  color: Color.fromARGB(255, 252, 251, 251), fontSize: 24),
+              style: GoogleFonts.poppins(
+                  color: Color.fromARGB(255, 252, 251, 251), fontSize: 22),
             ),
             centerTitle: true,
             bottom: TabBar(tabs: [
@@ -37,7 +46,7 @@ class _ClientPageState extends State<ClientPage> {
                 ),
                 child: Text(
                   'Formulaire Client',
-                  style: GoogleFonts.arbutus(
+                  style: GoogleFonts.poppins(
                     color: Color.fromARGB(255, 255, 255, 255),
                     fontSize: 15,
                   ),
@@ -51,7 +60,7 @@ class _ClientPageState extends State<ClientPage> {
                 ),
                 child: Text(
                   'Liste Client',
-                  style: GoogleFonts.arbutus(
+                  style: GoogleFonts.poppins(
                     color: Color.fromARGB(255, 252, 252, 252),
                     fontSize: 15,
                   ),

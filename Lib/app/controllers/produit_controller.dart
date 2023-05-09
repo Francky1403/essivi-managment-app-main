@@ -7,9 +7,10 @@ class ProduitController extends GetxController {
   RxList produits = RxList();
 
   //variable that shows if the widget is loading or not
-  RxBool isLoading = true.obs;
+  RxBool isLoading = false.obs;
   var url = "https://127.0.0.1/api/v1/produit/all";
   getProduits() async {
+    isLoading.value = true;
     var response = await DioService().getMethod(url);
     if (response.statusCode == 200) {
       response.data.forEach((element) {
